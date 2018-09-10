@@ -57,5 +57,12 @@ class IndexController extends MyController
         return $this->_execute($param);
     }
 
+    public function actionTestEs()
+    {
+        $param = [];
+        $param['key'] = $this->request->get('k');
+        return $this->_execute($param);
+    }
+
 
 }

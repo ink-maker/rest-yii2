@@ -13,7 +13,8 @@
         "yiisoft/yii2-mongodb": "^2.1",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
-        "pda/pheanstalk": "dev-master"
+        "pda/pheanstalk": "dev-master",
+        "elasticsearch/elasticsearch": "~6.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
