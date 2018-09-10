@@ -40,7 +40,9 @@
    * 重新封装Log工具
        * 使用消息来异步处理并发写日志需求，生产日志可以在不同应用，可以用一台服务器同时开启多个进程来处理写日志    
          
-             
+   * 新增全文检索
+       * 基于elasticsearch同步mysql来做全文检索服务    
+                      
    以上所有改动都不涉及yii2的核心类库改动，所以yii2原则上可以正常升级，
    除此之外yii2中所有核心组件也都能正常使用，建议在重新划定的层级中使用，
    以便业务的解耦和业务的内聚
@@ -51,9 +53,11 @@
    分别对应开发，测试和线上环境，注意prod模式下debug为false
    
   * 本地消息队列服务搭建
-      *wget https://github.com/kr/beanstalkd/archive/v1.10.tar.gz
-      *tar -xzvf v1.10.tar.gz
-      *cd beanstalkd-1.10/
-      *make 
-      *当前目录输入 beanstalk -v 有版本输出证明安装成功
-      *启动 beanstalk -l 127.0.0.1 -p 11300 &
+      * wget https://github.com/kr/beanstalkd/archive/v1.10.tar.gz
+      * tar -xzvf v1.10.tar.gz
+      * cd beanstalkd-1.10/
+      * make 
+      * 当前目录输入 beanstalk -v 有版本输出证明安装成功
+      * 启动 beanstalk -l 127.0.0.1 -p 11300 &
+      
+  * 使用go-mysql-elasticsearch数据同步
